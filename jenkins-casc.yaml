@@ -1,0 +1,40 @@
+jenkins:
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  labelAtoms:
+  - name: "agent"
+  - name: "built-in"
+  - name: "devops"
+  - name: "pragra"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  nodes:
+  - permanent:
+      labelString: "agent devops pragra"
+      launcher:
+        ssh:
+          credentialsId: "build-agent-creds"
+          host: "agent"
+          port: 22
+          sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
+      name: "agent"
+      remoteFS: "/var/jenkins_home"
+      retentionStrategy: "always"
+  - permanent:
+      labelString: "agent17"
+      launcher:
+        ssh:
+          credentialsId: "build-agent-creds"
+          host: "agent17"
+          port: 22
+          sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
+      name: "agent17"
+      remoteFS: "/var/jenkins_home"
+      retentionStrategy: "always"  
+ 
