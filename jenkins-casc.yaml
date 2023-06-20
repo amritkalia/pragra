@@ -47,4 +47,4 @@ jenkins:
           sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
       name: "agent17"
       remoteFS: "/var/jenkins_home"
-      retentionStrategy: "always"  
+      retentionStrategy: "always"
